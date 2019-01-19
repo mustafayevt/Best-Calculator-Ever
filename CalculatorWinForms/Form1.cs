@@ -110,6 +110,7 @@ namespace CalculatorWinForms
                         break;
                     default:
                         isOperand = false;
+                        equalPressed = false;
                         MainDisplayLbl.Text += btn;
                         break;
                 }
