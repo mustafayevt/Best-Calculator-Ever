@@ -86,6 +86,12 @@ namespace CalculatorWinForms
                             MainDisplayLbl.Text = string.Empty;
                             isOperand = true;
                         }
+                        else if (isOperand && !equalPressed)
+                        {
+                            allOpsLbl.Text = allOpsLbl.Text.Remove(allOpsLbl.Text.Length - 1);
+                            allOpsLbl.Text += btn;
+                        }
+
                         break;
                     case "=":
                         if (equalPressed && double.TryParse(allOpsLbl.Text.Last().ToString(), out double result))
